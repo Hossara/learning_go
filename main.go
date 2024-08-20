@@ -113,9 +113,9 @@ func main() {
 		fmt.Printf("%v\n", val)
 	}
 
-	myslice2 := []string{"Go", "Slices", "Are", "Powerful"}
+	myslice0 := []string{"Go", "Slices", "Are", "Powerful"}
 
-	fmt.Println(myslice2)
+	fmt.Println(myslice0)
 
 	arr1 := [5]int{
 		1: 10,
@@ -137,4 +137,26 @@ func main() {
 	fmt.Printf("myslice = %v\n", myslice1)
 	fmt.Printf("length = %d\n", len(myslice1))
 	fmt.Printf("capacity = %d\n", cap(myslice1))
+
+	// This example shows how to create slices using the make() function:
+	myslice2 := make([]int, 5, 10)
+	fmt.Printf("myslice1 = %v\n", myslice2)
+	fmt.Printf("length = %d\n", len(myslice2))
+	fmt.Printf("capacity = %d\n", cap(myslice2))
+
+	// with omitted capacity
+	myslice3 := make([]int, 5)
+	fmt.Printf("myslice2 = %v\n", myslice3)
+	fmt.Printf("length = %d\n", len(myslice3))
+	fmt.Printf("capacity = %d\n", cap(myslice3))
+
+	myslice4 := []int{1, 2, 3, 4, 5, 6}
+	fmt.Printf("myslice1 = %v\n", myslice4)
+	fmt.Printf("length = %d\n", len(myslice4))
+	fmt.Printf("capacity = %d\n", cap(myslice4))
+
+	myslice4 = append(myslice4, 20, 21)
+	fmt.Printf("myslice1 = %v\n", myslice4)
+	fmt.Printf("length = %d\n", len(myslice4))
+	fmt.Printf("capacity = %d\n", cap(myslice4))
 }
